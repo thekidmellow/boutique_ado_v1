@@ -1,8 +1,6 @@
 {% load static %}
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Boutique Ado {% block extratitle %}{% endblock %}</title>
-
 
 <!doctype html>
 <html lang="en">
@@ -45,24 +43,16 @@
     </header>
 
     {% if messages %}
-    <div class="message-container">
-        {% block messages %}
-        {% endblock %}
-    </div>
-    {% endif %}
+<div class="message-container">
+    {% block messages %}{% endblock %}
+</div>
+{% endif %}
 
-    {% block content %}
-    {% endblock %}
+{% block page_header %}{% endblock %}
 
-    {% block page_header %}
-    {% endblock %}
+{% block content %}{% endblock %}
 
-    {% block content %}
-    {% endblock %}
-
-    {% block postloadjs %}
-    {% endblock %}
-
+{% block postloadjs %}{% endblock %}
 
 </body>
 
